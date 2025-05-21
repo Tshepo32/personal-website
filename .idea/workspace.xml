@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Backend">
-      <change afterPath="$PROJECT_DIR$/personal-website/public/ltm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/AdminLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/BlogPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/BlogPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/components/AdminDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/components/AdminLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/components/dasboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal-website/src/youtubeUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/BlogFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/BlogControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/BlogFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,6 +177,7 @@
       <workItem from="1747846665482" duration="910000" />
       <workItem from="1747849144963" duration="320000" />
       <workItem from="1747850214569" duration="1976000" />
+      <workItem from="1747852402261" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -258,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747512353310</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Backend">
+      <option name="closed" value="true" />
+      <created>1747852621117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747852621117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
