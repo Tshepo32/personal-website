@@ -147,9 +147,53 @@ section {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
+.blog-section {
+  padding: 60px 20px;
+  background-color: #ffffff40;
+  text-align: center;
+}
+
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.blog-video {
+  margin: 10px 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.more-button-wrapper {
+  margin-top: 30px;
+}
+
+.hero-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
 
 /* About, Projects, Certifications, Contact */
-.project-section,
+
 .contact-section {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
@@ -175,11 +219,12 @@ section {
 }
 
 /* Project Cards */
-.project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+@media (max-width: 600px) {
+  .blog-card {
+    width: 90%;
+  }
 }
+
 
 .card {
   flex: 1 1 45%;

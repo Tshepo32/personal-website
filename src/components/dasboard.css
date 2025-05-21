@@ -1,0 +1,70 @@
+.dashboard-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dashboard-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-container input,
+.dashboard-container textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.dashboard-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.dashboard-container button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dashboard-container button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.status {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
