@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Backend">
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +185,7 @@
       <workItem from="1747923495440" duration="3533000" />
       <workItem from="1747938484334" duration="302000" />
       <workItem from="1747938910903" duration="895000" />
-      <workItem from="1747942646127" duration="5034000" />
+      <workItem from="1747942646127" duration="6513000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -253,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747854524651</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Properties">
+      <option name="closed" value="true" />
+      <created>1747948181668</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747948181668</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +271,7 @@
     <MESSAGE value="Push pages" />
     <MESSAGE value="Home page" />
     <MESSAGE value="Backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend" />
+    <MESSAGE value="Properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Properties" />
   </component>
 </project>
