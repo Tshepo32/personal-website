@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="connect front and back">
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="base url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/BlogControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/BlogControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/BlogPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/BlogPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/components/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/components/AdminDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
         <entry key="$PROJECT_DIR$/personal-website" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/personal-website" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -66,6 +66,7 @@
     "HTTP Request.generated-requests | #6.executor": "Run",
     "HTTP Request.generated-requests | #7.executor": "Run",
     "HTTP Request.generated-requests | #8.executor": "Run",
+    "JUnit.BlogControllerTest.create.executor": "Run",
     "JUnit.BlogControllerTest.delete.executor": "Run",
     "JUnit.BlogControllerTest.executor": "Run",
     "JUnit.BlogFactoryTest.createBlog.executor": "Run",
@@ -78,7 +79,7 @@
     "Spring Boot.Main.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -100,12 +101,25 @@
       <recent name="za.ac.cput.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.BlogControllerTest.create">
     <configuration name="generated-requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" requestIdentifier="#8" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="BlogControllerTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Maleo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.BlogControllerTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="BlogControllerTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Maleo" />
@@ -148,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BlogControllerTest.create" />
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="npm.start" />
         <item itemvalue="JUnit.BlogControllerTest.delete" />
         <item itemvalue="HTTP Request.generated-requests | #8" />
-        <item itemvalue="HTTP Request.generated-requests | #7" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +202,7 @@
       <workItem from="1747938484334" duration="302000" />
       <workItem from="1747938910903" duration="895000" />
       <workItem from="1747942646127" duration="11594000" />
-      <workItem from="1747991862729" duration="5060000" />
+      <workItem from="1747991862729" duration="8345000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -302,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748003981469</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="base url">
+      <option name="closed" value="true" />
+      <created>1748004701408</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748004701408</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +339,7 @@
     <MESSAGE value="Properties" />
     <MESSAGE value="clever" />
     <MESSAGE value="connect front and back" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect front and back" />
+    <MESSAGE value="base url" />
+    <option name="LAST_COMMIT_MESSAGE" value="base url" />
   </component>
 </project>
