@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Properties">
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="clever">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,39 +57,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;HTTP Request.generated-requests | #3.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #4.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #6.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #7.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.generated-requests | #8.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BlogControllerTest.delete.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BlogControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BlogFactoryTest.createBlog.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "HTTP Request.generated-requests | #3.executor": "Run",
+    "HTTP Request.generated-requests | #4.executor": "Run",
+    "HTTP Request.generated-requests | #6.executor": "Run",
+    "HTTP Request.generated-requests | #7.executor": "Run",
+    "HTTP Request.generated-requests | #8.executor": "Run",
+    "JUnit.BlogControllerTest.delete.executor": "Run",
+    "JUnit.BlogControllerTest.executor": "Run",
+    "JUnit.BlogFactoryTest.createBlog.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Main.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -186,7 +187,7 @@
       <workItem from="1747938484334" duration="302000" />
       <workItem from="1747938910903" duration="895000" />
       <workItem from="1747942646127" duration="11594000" />
-      <workItem from="1747991862729" duration="2778000" />
+      <workItem from="1747991862729" duration="4314000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -284,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747952436266</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="clever">
+      <option name="closed" value="true" />
+      <created>1747998394215</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747998394215</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +306,7 @@
     <MESSAGE value="Home page" />
     <MESSAGE value="Backend" />
     <MESSAGE value="Properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Properties" />
+    <MESSAGE value="clever" />
+    <option name="LAST_COMMIT_MESSAGE" value="clever" />
   </component>
 </project>
