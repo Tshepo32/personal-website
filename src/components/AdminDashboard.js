@@ -18,7 +18,7 @@ const AdminDashboard = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8080/api/blog/create', {
+            const response = await fetch('https://personal-website-16.onrender.com/api/blog/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title, content, videoUrl, createdAt}),

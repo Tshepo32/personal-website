@@ -29,7 +29,7 @@ function Home() {
     }, [location]);
 
     useEffect(() => {
-        fetch('http://personal-website-16.onrender.com/api/blog/getall?limit=2')
+        fetch('https://personal-website-16.onrender.com/api/blog/getall?limit=2')
             .then(response => {
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();

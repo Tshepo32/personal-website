@@ -12,7 +12,7 @@ const BlogPage = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/blog/getall")
+        fetch("https://personal-website-16.onrender.com/api/blog/getall")
             .then((res) => res.json())
             .then((data) => setBlogs(data))
             .catch((err) => console.error("Error loading blogs", err));
