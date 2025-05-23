@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/blog")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://tshepo32.github.io/personal-website")
 public class BlogController {
 
     private final BlogService blogService;

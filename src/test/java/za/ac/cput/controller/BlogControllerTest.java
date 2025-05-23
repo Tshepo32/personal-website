@@ -13,7 +13,7 @@ class BlogControllerTest {
 
     @Autowired
     private BlogController blogController;
-    private final String BASE_URL = "http://localhost:8080/api/blog";
+    private final String BASE_URL = "https://tshepo32.github.io/personal-website:8080/api/blog";
     private static Blog blog;
 
     @BeforeAll

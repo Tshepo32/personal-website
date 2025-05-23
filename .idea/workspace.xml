@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="clever">
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="connect front and back">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/BlogControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/BlogControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +188,7 @@
       <workItem from="1747938484334" duration="302000" />
       <workItem from="1747938910903" duration="895000" />
       <workItem from="1747942646127" duration="11594000" />
-      <workItem from="1747991862729" duration="4314000" />
+      <workItem from="1747991862729" duration="5060000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -293,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747998394215</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="connect front and back">
+      <option name="closed" value="true" />
+      <created>1748003981469</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748003981469</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +316,7 @@
     <MESSAGE value="Backend" />
     <MESSAGE value="Properties" />
     <MESSAGE value="clever" />
-    <option name="LAST_COMMIT_MESSAGE" value="clever" />
+    <MESSAGE value="connect front and back" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect front and back" />
   </component>
 </project>
