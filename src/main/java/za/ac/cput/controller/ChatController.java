@@ -10,7 +10,7 @@ import java.util.AbstractMap.SimpleEntry; // For Map.entry in older Java version
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000") // IMPORTANT: Keep this for React dev server
+@CrossOrigin(origins = "https://tshepo32.github.io")
 public class ChatController {
 
     // --- YOUR PERSONAL KNOWLEDGE BASE ---
