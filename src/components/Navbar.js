@@ -22,7 +22,7 @@ function Navbar() {
                 <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
                 <li><a href="/personal-website/#certifications" onClick={closeMenu}>Certifications</a></li>
                 <li><a href="/personal-website/#contact" onClick={closeMenu}>Contact</a></li>
-                <li><Link to="/admin/login" onClick={closeMenu}>Admin</Link></li>
+                <li><Link to="/admin/login" onClick={closeMenu}></Link></li>
             </ul>
         </nav>
     );

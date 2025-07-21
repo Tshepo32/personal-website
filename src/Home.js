@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './Home.css';
+import VoiceCommand from "./VoiceCommand"; // Import VoiceCommand
 import tshepoImg from './tshepo.jpg';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function getYouTubeId(url) {
+    // This regex is more robust for various YouTube URL formats
     const match = url.match(
         /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/
     );
@@ -14,8 +16,10 @@ function getYouTubeId(url) {
 
 function Home() {
     const [blogPosts, setBlogPosts] = useState([]);
+    const [expandedPostId, setExpandedPostId] = useState(null);
     const location = useLocation();
 
+    // Effect for hash-based scrolling
     useEffect(() => {
         if (location.hash) {
             const id = location.hash.replace('#', '');
@@ -28,24 +32,54 @@ function Home() {
         }
     }, [location]);
 
+    // Effect for initial and periodic blog posts fetch with frontend sorting/slicing
     useEffect(() => {
-        fetch('https://personal-website-16.onrender.com/api/blog/getall?limit=2')
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.json();
-            })
-            .then(data => setBlogPosts(data))
-            .catch(error => console.error('Error fetching blog posts:', error));
-    }, []);
+        const fetchAndProcessBlogPosts = () => {
+            // Keep the query parameters in the fetch URL, as they might optimize backend response
+            fetch('https://personal-website-16.onrender.com/api/blog/getall?limit=2&sortBy=createdAt:desc')
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Network response was not ok (during blog fetch):', response.statusText);
+                        // No need to throw an error that stops the app if the primary goal is just to ping
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && Array.isArray(data)) { // Ensure data is an array before processing
+                        // Frontend sorting to ensure latest posts are first
+                        const sortedData = [...data].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                        // Frontend slicing to get only the top 2 latest posts
+                        setBlogPosts(sortedData.slice(0, 2));
+                    } else {
+                        console.warn("Fetched data is not an array:", data);
+                        setBlogPosts([]); // Reset if data format is unexpected
+                    }
+                })
+                .catch(error => console.error('Error fetching or processing blog posts:', error));
+        };
+
+        // Fetch immediately when the component mounts
+        fetchAndProcessBlogPosts();
+
+        // Set up the interval to fetch every 10 seconds (10000 milliseconds)
+        const intervalId = setInterval(fetchAndProcessBlogPosts, 10000);
+
+        // Clean up the interval when the component unmounts
+        return () => clearInterval(intervalId);
+    }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
+
+    const toggleExpand = (postId) => {
+        setExpandedPostId(prevId => (prevId === postId ? null : postId));
+    };
 
     return (
         <>
             <Navbar />
             <div className="home-container">
                 <header className="hero" id="home">
-                    <h1>Welcome, I'm Tshepo Maleo 👋</h1>
+                    <h1>Welcome, I'm Lorens Tshepo Maleo 👋</h1>
                     <p>
-                        Aspiring Software Engineer | Cybersecurity Specialist | AI Engineer
+                        Frontend Developer Intern @ BOS Technology
                     </p>
                     <p>
                         Final Year Diploma Student in Applications Development | Regional Finalist in Huawei 2024–2025
@@ -53,6 +87,8 @@ function Home() {
                     </p>
                     <a href="#contact" className="hero-button">Get in Touch</a>
                 </header>
+
+                <VoiceCommand />
 
                 <section id="about" className="about-section">
                     <h2>About Me</h2>
@@ -62,15 +98,13 @@ function Home() {
                         </div>
                         <div className="about-text">
                             <p>
-                                I’m a final-year Diploma student in Application Development at CPUT,
-                                previously completed a Higher Certificate in ICT.
-                                I'm passionate about becoming a <strong>Software Engineer</strong>,
-                                <strong> Cybersecurity Specialist</strong>, and <strong>AI Engineer</strong>.
-                                I’ve participated as a regional finalist in the Huawei ICT Competition
-                                (Computing Track), working with <em>openEuler, openGauss</em>, and <em>Kunpeng</em>.
-                                My journey is also backed by certifications from <strong>Harvard (CS50)</strong>,
-                                <strong> Microsoft (Azure AI Fundamentals)</strong>, and <strong>Huawei Cloud
-                                Advanced</strong>.
+                                My Name is Lorens Tshepo Maleo, I’m a final-year Diploma student in ICT: Applications
+                                Development at Cape Peninsula University of Technology.
+                                I'm a Software Developer. I’ve participated as a regional finalist in the
+                                Huawei ICT Competition (Computing Track), working with three technologies,
+                                OpenEuler, OpenGauss, and Kunpeng. My journey is also backed by certifications
+                                from Harvard (CS50), Microsoft (Azure AI Fundamentals), and Huawei Cloud
+                                Advanced.
                             </p>
                         </div>
                     </div>
@@ -80,14 +114,28 @@ function Home() {
                     <h2>From the Blog</h2>
                     <div className="blog-cards">
                         {blogPosts.length > 0 ? (
-                            blogPosts.slice(0, 2).map(post => {
-                                const youtubeId = post.videoUrl && post.videoUrl.includes("youtube.com")
-                                    ? getYouTubeId(post.videoUrl)
-                                    : null;
+                            blogPosts.map(post => {
+                                // Corrected YouTube URL regex and embed src (use www.youtube.com for standard embeds)
+                                const youtubeId = getYouTubeId(post.videoUrl);
+
+                                const isExpanded = expandedPostId === post.id;
+                                // Use post.summary if available, otherwise truncate content
+                                const displayContent = isExpanded ? post.content : (post.summary || post.content?.substring(0, 150) + '...');
 
                                 return (
                                     <div key={post.id} className="blog-card">
                                         <h3>{post.title}</h3>
+                                        {post.createdAt && (
+                                            <p className="blog-date">
+                                                {new Date(post.createdAt).toLocaleDateString('en-US', {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric',
+                                                    hour: '2-digit',
+                                                    minute: '2-digit'
+                                                })}
+                                            </p>
+                                        )}
 
                                         {post.videoUrl && (
                                             <div className="blog-video">
@@ -95,6 +143,7 @@ function Home() {
                                                     <iframe
                                                         width="100%"
                                                         height="250"
+                                                        // Standard YouTube embed URL
                                                         src={`https://www.youtube.com/embed/${youtubeId}`}
                                                         frameBorder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -110,8 +159,15 @@ function Home() {
                                             </div>
                                         )}
 
-                                        <p>{post.summary || post.content?.substring(0, 100)}...</p>
-                                        <a href={`/blog/${post.id}`} className="link-button">Read More</a>
+                                        {/* Render content, allowing for HTML if needed */}
+                                        <p dangerouslySetInnerHTML={{ __html: displayContent }}></p>
+
+                                        {/* Only show "Read More" button if there's more content than initially displayed */}
+                                        {post.content && (post.summary && post.content.length > post.summary.length || (!post.summary && post.content.length > 150)) && (
+                                            <button onClick={() => toggleExpand(post.id)} className="link-button">
+                                                {isExpanded ? 'Read Less' : 'Read More'}
+                                            </button>
+                                        )}
                                     </div>
                                 );
                             })
@@ -214,7 +270,7 @@ function Home() {
                                 <FaGithub />
                             </a>
                         </div>
-                        <p>&copy; {new Date().getFullYear()} Lorens Tshepo Maleo. All rights reserved.</p>
+                        <p>© {new Date().getFullYear()} Lorens Tshepo Maleo. All rights reserved.</p>
                     </div>
                 </footer>
             </div>

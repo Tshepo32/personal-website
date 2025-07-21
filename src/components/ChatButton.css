@@ -1,0 +1,121 @@
+/* src/components/ChatButton.css */
+
+/* ... (Your existing .chat-toggle-button and :hover styles) ... */
+
+.chat-toggle-button {
+    position: fixed;
+    bottom: 60px; /* As you specified */
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.chat-toggle-button:hover {
+    background-color: #28a745;
+}
+
+.chat-icon {
+    color: white; /* Green icon color */
+    font-size: inherit;
+}
+
+
+/* --- Chat Window Styles (Adjusted for smaller size) --- */
+.chat-window {
+    position: fixed;
+    bottom: 130px; /* Still needs to be above the button */
+    right: 20px;
+    width: 300px;  /* DECREASED WIDTH: Example from 350px to 300px */
+    height: 400px; /* DECREASED HEIGHT: Example from 500px to 400px */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+/* ... (The rest of your chat window and message styles, which remain the same) ... */
+.chat-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #f1f0f0;
+    color: #333;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.chat-input-area button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+}

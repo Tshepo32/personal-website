@@ -1,0 +1,51 @@
+/* src/components/Footer.css */
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 70px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-icons {
+    margin-bottom: 15px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 28px;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #007bff;
+}
+
+.footer p {
+    font-size: 0.95em;
+    margin: 0;
+    line-height: 1.5; 
+}
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+
+    .footer-icons a {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+}
