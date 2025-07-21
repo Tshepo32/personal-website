@@ -23,7 +23,7 @@ const ChatWindow = ({ onClose }) => {
 
         try {
             // Replace with your actual backend URL
-            const response = await fetch('http://localhost:8080/api/ask', {
+            const response = await fetch('https://personal-website-16.onrender.com/api/ask', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
