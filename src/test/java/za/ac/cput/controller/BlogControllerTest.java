@@ -20,9 +20,9 @@ class BlogControllerTest {
     public static void setup() {
         // Create a blog using the BlogFactory
         blog = BlogFactory.createBlog(
-                "Test Title", // title
-                "Test Content", // content
-                "https://www.youtube.com/watch?v=6IyvkPhrB5M" // videoUrl
+                "Test Title",
+                "Test Content",
+                "https://www.youtube.com/watch?v=6IyvkPhrB5M"
         );
     }
 
