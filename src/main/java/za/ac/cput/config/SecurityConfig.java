@@ -2,6 +2,7 @@ package za.ac.cput.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -16,17 +17,29 @@ import java.util.List;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())
-                .cors(cors -> {})
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/api/**") // ❗️Allow API calls without CSRF token
+                )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/blog/getall").permitAll()
-                        .requestMatchers("/api/blog/create").permitAll()
-                        .requestMatchers("/api/ask").permitAll()
+                        .requestMatchers(
+                                "/api/**",
+                                "/contact",
+                                "/projects",
+                                "/register",
+                                "/about",
+                                "/home",
+                                "/",
+                                "/images/**",
+                                "/styles/**",
+                                "/scripts/**",
+                                "/fonts/**",
+                                "/icons/**"
+                        ).permitAll()
                         .anyRequest().authenticated()
-                );
-
+                )
+                .cors(Customizer.withDefaults());
         return http.build();
     }
 
