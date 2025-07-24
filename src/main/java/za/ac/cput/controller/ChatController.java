@@ -14,23 +14,23 @@ public class ChatController {
     private final Map<List<String>, String> personalFacts = new HashMap<>();
 
     public ChatController() {
-        personalFacts.put(Arrays.asList("name", "who are you", "your name"), "My name is Tshepo! Nice to meet you.");
-        personalFacts.put(Arrays.asList("age", "how old are you"), "I am [Your Age] years old.");
-        personalFacts.put(Arrays.asList("profession", "job", "what do you do", "work"), "I am a [Your Profession/Role], specializing in [Your Specialization].");
+        personalFacts.put(Arrays.asList("name", "who are you", "your name"), "My name is Lorens. Nice to meet you.");
+        personalFacts.put(Arrays.asList("age", "how old are you"), "I'm a program, programmed this year, so that makes me less than a year old.");
+        personalFacts.put(Arrays.asList("profession", "job", "what do you do", "work"), "I am a Fullstack developer, specializing in Java.");
         personalFacts.put(Arrays.asList("location", "where are you based", "live"), "I am currently based in Cape Town, Western Cape, South Africa.");
-        personalFacts.put(Arrays.asList("education", "studied", "where did you study"), "I studied [Your Degree] at [Your University Name].");
-        personalFacts.put(Arrays.asList("skills", "tech stack", "technologies", "know"), "I have strong skills in [Skill 1], [Skill 2], [Skill 3], and more!");
-        personalFacts.put(Arrays.asList("experience", "work history", "worked at"), "I have professional experience in [Industry] and worked on projects involving [Type of Projects].");
-        personalFacts.put(Arrays.asList("hobbies", "interests", "free time"), "In my free time, I enjoy [Hobby 1], [Hobby 2], and [Hobby 3].");
-        personalFacts.put(Arrays.asList("passion", "motivated by"), "I'm passionate about [Your Passion] and constantly learning.");
-        personalFacts.put(Arrays.asList("contact", "email", "get in touch"), "You can reach me directly at [Your Email Address].");
-        personalFacts.put(Arrays.asList("linkedin", "social media", "connect"), "You can connect with me on LinkedIn: [Your LinkedIn URL].");
+        personalFacts.put(Arrays.asList("education", "studied", "where did you study"), "I did my diploma in ICT: Applications Development at Cape Peninsula University of Technology.");
+        personalFacts.put(Arrays.asList("skills", "tech stack", "technologies", "know"), "I have strong skills in Java, C, Python, Data structures, Algorithms and more.");
+        personalFacts.put(Arrays.asList("experience", "work history", "worked at"), "I'm currently a frontend developer intern at Bos Technology.");
+        personalFacts.put(Arrays.asList("hobbies", "interests", "free time"), "In my free time, I enjoy comedy sitcoms, I love to read biographical books, and I love old school music.");
+        personalFacts.put(Arrays.asList("passion", "motivated by"), "I'm passionate about Coding and constantly learning and practicing.");
+        personalFacts.put(Arrays.asList("contact", "email", "get in touch"), "You can reach me directly on WhatsApp at 0717596096.");
+        personalFacts.put(Arrays.asList("linkedin", "social media", "connect"), "You can connect with me on LinkedIn: https://www.linkedin.com/in/lorens-tshepo-m-2533b04a/.");
         personalFacts.put(Arrays.asList("hello", "hi", "hey"), "Hello there! How can I help you today?");
         personalFacts.put(Arrays.asList("how are you", "you doing"), "I'm just a program, but I'm doing great! Thanks for asking.");
         personalFacts.put(Arrays.asList("thank you", "thanks", "cheers"), "You're very welcome! Anything else you'd like to know?");
         personalFacts.put(Arrays.asList("bye", "goodbye", "see ya"), "Goodbye! Feel free to come back with more questions.");
-        personalFacts.put(Arrays.asList("favourite food", "favorite meal"), "My favourite food is [Your Favourite Food].");
-        personalFacts.put(Arrays.asList("dream job", "ideal career"), "My dream job would involve [Your Ideal Career].");
+        personalFacts.put(Arrays.asList("favourite food", "favorite meal"), "Just include meat and we good to go.");
+        personalFacts.put(Arrays.asList("dream job", "ideal career"), "My dream job is senior developer, but I don't intend on working till 60 years old.");
     }
 
     @PostMapping("/ask")
