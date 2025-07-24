@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Cross origin for chat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,11 @@
     "HTTP Request.generated-requests | #34.executor": "Run",
     "HTTP Request.generated-requests | #35.executor": "Run",
     "HTTP Request.generated-requests | #36.executor": "Run",
+    "HTTP Request.generated-requests | #37.executor": "Run",
+    "HTTP Request.generated-requests | #38.executor": "Run",
+    "HTTP Request.generated-requests | #39.executor": "Run",
     "HTTP Request.generated-requests | #4.executor": "Run",
+    "HTTP Request.generated-requests | #40.executor": "Run",
     "HTTP Request.generated-requests | #6.executor": "Run",
     "HTTP Request.generated-requests | #7.executor": "Run",
     "HTTP Request.generated-requests | #8.executor": "Run",
@@ -119,17 +123,14 @@
       <recent name="za.ac.cput.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #36">
-    <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="generated-requests | #38" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="38" requestIdentifier="#38" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #34" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="34" requestIdentifier="#34" runType="Run single request">
+    <configuration name="generated-requests | #39" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="39" requestIdentifier="#39" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #35" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="35" requestIdentifier="#35" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #36" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="36" requestIdentifier="#36" runType="Run single request">
+    <configuration name="generated-requests | #40" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="40" requestIdentifier="#40" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -145,13 +146,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/personal-website/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #36" />
-        <item itemvalue="HTTP Request.generated-requests | #35" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="HTTP Request.generated-requests | #40" />
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="HTTP Request.generated-requests | #34" />
-        <item itemvalue="HTTP Request.generated-requests | #33" />
+        <item itemvalue="HTTP Request.generated-requests | #39" />
+        <item itemvalue="HTTP Request.generated-requests | #38" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +212,7 @@
       <workItem from="1753131294449" duration="13814000" />
       <workItem from="1753150462092" duration="3517000" />
       <workItem from="1753157671431" duration="894000" />
-      <workItem from="1753294835179" duration="2697000" />
+      <workItem from="1753294835179" duration="8320000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -387,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753154265353</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Cross origin for chat">
+      <option name="closed" value="true" />
+      <created>1753364008020</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1753364008020</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
