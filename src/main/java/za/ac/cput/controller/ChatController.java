@@ -8,7 +8,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "https://tshepo32.github.io") // Or "*" for dev testing
+@CrossOrigin(origins = "https://tshepo32.github.io")
 public class ChatController {
 
     private final Map<List<String>, String> personalFacts = new HashMap<>();
