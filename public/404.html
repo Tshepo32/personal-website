@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path (e.g., /personal-website/blog)
+        var path = window.location.pathname;
+
+        // Construct the base URL for your main index.html
+        var basepath = '/personal-website/';
+
+        // If the path already includes the basepath, simply redirect
+        if (path.startsWith(basepath)) {
+            window.location.replace(basepath + '?path=' + encodeURIComponent(path.substring(basepath.length)));
+        } else {
+            // Fallback if basepath is not found or for other cases, redirect to root
+            window.location.replace(basepath + '?path=' + encodeURIComponent(path.substring(1)));
+        }
+    </script>
+</head>
+<body>
+<p>If you are not redirected automatically, follow this <a href="/">link</a>.</p>
+</body>
+</html>
