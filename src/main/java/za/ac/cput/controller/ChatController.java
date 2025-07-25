@@ -46,7 +46,7 @@ public class ChatController {
 
         // Initialize WebClient with a base URL if applicable, or directly here
         this.webClient = webClientBuilder
-                .baseUrl("http://localhost:5000") // Default to localhost:5000 for local Python service
+                .baseUrl("https://bott-2nq6.onrender.com")
                 .build();
     }
 
