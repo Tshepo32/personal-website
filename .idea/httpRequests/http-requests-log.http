@@ -1,0 +1,528 @@
+POST http://localhost:8080/api/ask
+Content-Type: application/json
+Content-Length: 47
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=04C2E9B257F3B9B0DC7081A28F308FFB
+
+{
+  "question": "tell me about you education"
+}
+
+<> 2025-07-24T165519.200.json
+
+###
+
+POST http://localhost:8080/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=04C2E9B257F3B9B0DC7081A28F308FFB
+
+{
+  "question": "who are you"
+}
+
+<> 2025-07-24T165253.200.json
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "what is your name"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E1EFD476C7F75939BFB86E4B989D9C1B
+x-http2-scheme: https
+
+{
+  "question": "what is your name"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=091D20BB1138D0A6685059DB34F2F4B0
+x-http2-scheme: https
+
+{
+  "question": "what is your name"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=091D20BB1138D0A6685059DB34F2F4B0
+x-http2-scheme: https
+
+{
+  "question": "what is your name"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=091D20BB1138D0A6685059DB34F2F4B0
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=CA89CADF356266DB05FA9EBE2A8E18E3
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=CA89CADF356266DB05FA9EBE2A8E18E3
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 31
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+{
+  "question": "who are you"
+}
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=51A00D30DEB6C8A6C1544AE19310B7D2
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+GET https://personal-website-16.onrender.com/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+content-length: 0
+
+<> 2025-07-22T014825.200.json
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=F42A65115B02AD10953B6AC457FF4DAC
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+POST https://personal-website-16.onrender.com/api/ask
+Content-Type: application/json
+Content-Length: 13
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+"who are you"
+
+###
+
+GET http://localhost:8080/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=04C2E9B257F3B9B0DC7081A28F308FFB
+content-length: 0
+
+<> 2025-05-21T005842.200.json
+
+###
+
+GET http://localhost:8080/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=04C2E9B257F3B9B0DC7081A28F308FFB
+content-length: 0
+
+<> 2025-05-21T005542.200.json
+
+###
+
+GET http://localhost:8080/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8080/personal/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=848E66923AE67EBF5AEE254C95C8D5C4
+content-length: 0
+
+###
+
+GET http://localhost:8080/personal/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=848E66923AE67EBF5AEE254C95C8D5C4
+content-length: 0
+
+###
+
+GET http://localhost:8080/personal/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=848E66923AE67EBF5AEE254C95C8D5C4
+content-length: 0
+
+###
+
+GET http://localhost:8080/personal/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=E30E8E2904ACEAAD5A8A257B98E1F202
+content-length: 0
+
+###
+
+GET http://localhost:8080/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-05-21T002712.404.html
+
+###
+
+GET http://localhost:8080/personal/api/blog/getall
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.6
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+

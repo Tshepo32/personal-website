@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="connect with deployed python.">
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Fix my java chatcontroller with it's lies.">
+      <change afterPath="$PROJECT_DIR$/personal-website/public/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,7 @@
         <option value="CSS File" />
         <option value="Class" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -36,7 +39,7 @@
         <entry key="$PROJECT_DIR$/personal-website" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/personal-website" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -69,6 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "HTTP Request.generated-requests | #29.executor": "Run",
     "HTTP Request.generated-requests | #3.executor": "Run",
     "HTTP Request.generated-requests | #30.executor": "Run",
@@ -99,7 +103,7 @@
     "Spring Boot.Main.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Tshepo/AppData/Local/Programs/Python/Python313/python.exe",
     "list.type.of.created.stylesheet": "CSS",
@@ -108,6 +112,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
     "npm.deploy.executor": "Run",
     "npm.predeploy.executor": "Run",
     "npm.start.executor": "Run",
@@ -128,10 +133,7 @@
       <recent name="za.ac.cput.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="generated-requests | #40" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="40" requestIdentifier="#40" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.build">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Maleo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.Main" />
@@ -144,6 +146,16 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/personal-website/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/personal-website/package.json" />
@@ -177,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
-        <item itemvalue="HTTP Request.generated-requests | #40" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +245,7 @@
       <workItem from="1753157671431" duration="894000" />
       <workItem from="1753294835179" duration="15090000" />
       <workItem from="1753378052337" duration="3795000" />
-      <workItem from="1753452621943" duration="9234000" />
+      <workItem from="1753452621943" duration="13404000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -459,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753462667644</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fix my java chatcontroller with it's lies.">
+      <option name="closed" value="true" />
+      <created>1753464074090</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1753464074090</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +517,8 @@
     <MESSAGE value="Chat controller converse." />
     <MESSAGE value="connect with python." />
     <MESSAGE value="connect with deployed python." />
-    <option name="LAST_COMMIT_MESSAGE" value="connect with deployed python." />
+    <MESSAGE value="Fix my java chatcontroller with it's lies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix my java chatcontroller with it's lies." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

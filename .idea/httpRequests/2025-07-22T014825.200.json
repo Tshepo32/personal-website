@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Test Title",
+    "content": "Test Content",
+    "videoUrl": "https://www.youtube.com/watch?v=6IyvkPhrB5M",
+    "createdAt": "2025-05-23T15:25:17.178896"
+  },
+  {
+    "id": 2,
+    "title": "CS50",
+    "content": "This is just a test for communication",
+    "videoUrl": "https://www.youtube.com/watch?v=6IyvkPhrB5M",
+    "createdAt": "2025-05-25T12:00:12.67"
+  },
+  {
+    "id": 3,
+    "title": "3rd",
+    "content": "This is second test",
+    "videoUrl": "https://www.youtube.com/watch?v=6IyvkPhrB5M",
+    "createdAt": "2025-05-25T14:12:50.368"
+  }
+]
