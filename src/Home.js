@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './Home.css';
-import VoiceCommand from "./VoiceCommand"; // Import VoiceCommand
+import VoiceCommand from "./VoiceCommand";
 import tshepoImg from './tshepo.jpg';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
@@ -82,7 +82,7 @@ function Home() {
                         Frontend Developer Intern @ BOS Technology
                     </p>
                     <p>
-                        Final Year Diploma Student in Applications Development | Regional Finalist in Huawei 2024–2025
+                        Full-Stack Developer | Regional Finalist in Huawei 2024–2025
                         ICT Competition
                     </p>
                     <a href="#contact" className="hero-button">Get in Touch</a>
@@ -98,13 +98,30 @@ function Home() {
                         </div>
                         <div className="about-text">
                             <p>
-                                My Name is Lorens Tshepo Maleo, I’m a final-year Diploma student in ICT: Applications
-                                Development at Cape Peninsula University of Technology.
-                                I'm a Software Developer. I’ve participated as a regional finalist in the
-                                Huawei ICT Competition (Computing Track), working with three technologies,
-                                OpenEuler, OpenGauss, and Kunpeng. My journey is also backed by certifications
-                                from Harvard (CS50), Microsoft (Azure AI Fundamentals), and Huawei Cloud
-                                Advanced.
+                                Hi, I'm Lorens Tshepo Maleo, a skilled professional with a strong foundation
+                                in full-stack development, data analytics, and software engineering.
+                                My passion lies in software development, and I'm eager to contribute to
+                                challenging projects while continuously expanding my technical expertise
+                                through hands-on experience and continuous learning.
+                            </p>
+                            <br/>
+                            <p>
+                                I'm technically proficient and adept at working in Linux environments,
+                                including Open Euler, OpenGauss, and Kunpeng. I specialize in developing
+                                 and deploying applications using Java, Spring Boot, React, Python and
+                                SQL, while adhering to industry best practices. My skills also extend to
+                                data analytics, visualization, and reporting, enhancing my ability to work
+                                with business intelligence tools.
+                            </p>
+                            <br/>
+                            <p>
+                                As a regional finalist in the Huawei ICT Competition, I've demonstrated strong
+                                computational and problem-solving abilities. I thrive in collaborative team
+                                settings and have experience with GitHub-based collaborations and agile
+                                software development practices. I'm a natural problem solver, capable of
+                                analyzing complex issues and delivering effective solutions. Feel free to
+                                explore my work and see how my skills can bring innovative solutions to
+                                your projects.
                             </p>
                         </div>
                     </div>
