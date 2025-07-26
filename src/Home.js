@@ -158,8 +158,6 @@ function Home() {
                                             <div className="blog-video">
                                                 {youtubeId ? (
                                                     <iframe
-                                                        width="100%"
-                                                        height="250"
                                                         // Standard YouTube embed URL
                                                         src={`https://www.youtube.com/embed/${youtubeId}`}
                                                         frameBorder="0"
