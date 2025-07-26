@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Fix my java chatcontroller with it's lies.">
-      <change afterPath="$PROJECT_DIR$/personal-website/public/404.html" afterDir="false" />
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="going back to my github page">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/pinger/PythonChatbotPinger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal-website/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
         <entry key="$PROJECT_DIR$/personal-website" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/personal-website" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -103,7 +104,7 @@
     "Spring Boot.Main.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Tshepo/AppData/Local/Programs/Python/Python313/python.exe",
     "list.type.of.created.stylesheet": "CSS",
@@ -133,7 +134,7 @@
       <recent name="za.ac.cput.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Maleo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.Main" />
@@ -189,9 +190,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="npm.predeploy" />
       </list>
@@ -245,7 +246,9 @@
       <workItem from="1753157671431" duration="894000" />
       <workItem from="1753294835179" duration="15090000" />
       <workItem from="1753378052337" duration="3795000" />
-      <workItem from="1753452621943" duration="13404000" />
+      <workItem from="1753452621943" duration="14647000" />
+      <workItem from="1753479607700" duration="1888000" />
+      <workItem from="1753535971498" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -479,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753464074090</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="going back to my github page">
+      <option name="closed" value="true" />
+      <created>1753474574504</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1753474574504</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +529,8 @@
     <MESSAGE value="connect with python." />
     <MESSAGE value="connect with deployed python." />
     <MESSAGE value="Fix my java chatcontroller with it's lies." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix my java chatcontroller with it's lies." />
+    <MESSAGE value="going back to my github page" />
+    <option name="LAST_COMMIT_MESSAGE" value="going back to my github page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
