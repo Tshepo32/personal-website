@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="going back to my github page">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/pinger/PythonChatbotPinger.java" afterDir="false" />
+    <list default="true" id="c1e9771d-a8ec-46b4-9b05-07920ab9daa4" name="Changes" comment="Python pinger">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/c/tertis.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3c36464-211d-47c9-813a-b36907e837a8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e3c36464-211d-47c9-813a-b36907e837a8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personal-website" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personal-website/src/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personal-website/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/VoiceCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/VoiceCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal-website/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/personal-website/src/components/Footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +28,9 @@
         <option value="JUnit5 Test Class" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,7 +45,7 @@
         <entry key="$PROJECT_DIR$/personal-website" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/personal-website" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -49,21 +54,28 @@
     &quot;assignee&quot;: &quot;Tshepo32&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/tshepo32/personal-website.git&quot;,
-    &quot;accountId&quot;: &quot;89ab087b-3e79-4c97-9b6b-2ca036eb9585&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Tshepo32/personal-website.git",
+    "accountId": "05717ffa-5edf-4b40-8263-05cfff6fffd3"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2x5M2jCVIHzUAZ4QFMvg8Lr3Wr0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -100,13 +112,18 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Main.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tshepo/AppData/Local/Programs/Python/Python313/python.exe",
+    "last_opened_file_path": "C:/Users/Tshepo/IdeaProjects/Maleo",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -120,7 +137,8 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -201,8 +219,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19072.14" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19072.14" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
       </set>
     </attachedChunks>
   </component>
@@ -248,7 +266,15 @@
       <workItem from="1753378052337" duration="3795000" />
       <workItem from="1753452621943" duration="14647000" />
       <workItem from="1753479607700" duration="1888000" />
-      <workItem from="1753535971498" duration="387000" />
+      <workItem from="1753535971498" duration="1101000" />
+      <workItem from="1753625303009" duration="354000" />
+      <workItem from="1753718106965" duration="3248000" />
+      <workItem from="1753722656185" duration="548000" />
+      <workItem from="1753830189346" duration="45000" />
+      <workItem from="1754585918972" duration="641000" />
+      <workItem from="1755703520143" duration="2185000" />
+      <workItem from="1755707403954" duration="1751000" />
+      <workItem from="1783346184661" duration="1864000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -490,7 +516,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753474574504</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Python pinger">
+      <option name="closed" value="true" />
+      <created>1753536468111</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1753536468111</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +564,8 @@
     <MESSAGE value="connect with deployed python." />
     <MESSAGE value="Fix my java chatcontroller with it's lies." />
     <MESSAGE value="going back to my github page" />
-    <option name="LAST_COMMIT_MESSAGE" value="going back to my github page" />
+    <MESSAGE value="Python pinger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Python pinger" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="personal@127.0.0.1">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.55">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1055,25 +1055,25 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </table>
     <column id="304" parent="302" name="id">
       <AutoIncrement>2</AutoIncrement>
-      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
     </column>
     <column id="305" parent="302" name="content">
-      <DasType>varchar(5000)|0s</DasType>
       <Position>2</Position>
+      <StoredType>varchar(5000)|0s</StoredType>
     </column>
     <column id="306" parent="302" name="created_at">
-      <DasType>datetime(6)|0s</DasType>
       <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
     </column>
     <column id="307" parent="302" name="title">
-      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="308" parent="302" name="video_url">
-      <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <index id="309" parent="302" name="PRIMARY">
       <ColNames>id</ColNames>
@@ -1087,21 +1087,21 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </key>
     <column id="311" parent="303" name="id">
       <AutoIncrement>1</AutoIncrement>
-      <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>bigint|0s</StoredType>
     </column>
     <column id="312" parent="303" name="content">
-      <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="313" parent="303" name="full_name">
-      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <column id="314" parent="303" name="subject">
-      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
     <index id="315" parent="303" name="PRIMARY">
       <ColNames>id</ColNames>
