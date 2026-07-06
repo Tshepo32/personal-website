@@ -4,31 +4,39 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import './VoiceCommand.css';
 
 // Define language options with their display names
+// NOTE: 'tn-ZA' (Setswana) is mentioned in commands but not defined here.
+// If you intend to use Setswana, you must add it to this LANGUAGES object
+// and ensure your browser supports it for speech recognition and synthesis.
 const LANGUAGES = {
-    'en-US': 'English'
+    'en-US': 'English',
+    // 'tn-ZA': 'Setswana' // Uncomment and add if Setswana is truly supported and needed
 };
 
 function VoiceCommand() {
     const navigate = useNavigate();
     const [currentLang, setCurrentLang] = useState('en-US'); // Default to English for recognition and TTS
+    const [isListeningActive, setIsListeningActive] = useState(false); // Manages the toggle state
 
     // Function to get the text from the About Me section
     const getAboutMeText = () => {
         const aboutSection = document.getElementById('about');
         if (aboutSection) {
-            // Select all paragraph and strong tags within the about-text div
+            // Get all text content directly from the 'about' section or its primary text container
             const aboutTextDiv = aboutSection.querySelector('.about-text');
             if (aboutTextDiv) {
-                // Get all text content, excluding image alt text, and combine it
-                const paragraphs = aboutTextDiv.querySelectorAll('p');
-                let fullText = '';
-                paragraphs.forEach(p => {
-                    fullText += p.textContent + ' ';
-                });
-                return fullText.trim();
+                // Use textContent directly, which concatenates text nodes
+                const text = aboutTextDiv.textContent || aboutTextDiv.innerText;
+                if (text && text.trim().length > 0) {
+                    return text.trim();
+                }
+            }
+            // Fallback to the entire section's text if .about-text is not found or empty
+            const fullSectionText = aboutSection.textContent || aboutSection.innerText;
+            if (fullSectionText && fullSectionText.trim().length > 0) {
+                return fullSectionText.trim();
             }
         }
-        return "I couldn't find the about me section.";
+        return "I couldn't find detailed content for the about me section.";
     };
 
     // Function to speak text using the Web Speech API
@@ -36,6 +44,8 @@ function VoiceCommand() {
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = currentLang; // Use the currently active language for speech output
+            // Stop any ongoing speech before starting new one to avoid overlapping
+            window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
         } else {
             console.warn("Text-to-speech not supported in this browser.");
@@ -57,16 +67,27 @@ function VoiceCommand() {
             const element = document.getElementById(targetId);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
+                speakText(`Scrolling to ${section} section.`);
+            } else {
+                speakText(`I couldn't find the ${section} section to scroll to.`);
             }
+        } else {
+            speakText(`I don't recognize the command to go to ${section}.`);
         }
     };
 
     // Helper function to switch the active language for recognition
     const switchLanguage = (langCode) => {
-        if (currentLang !== langCode) { // Only switch if it's a different language
+        if (!LANGUAGES[langCode]) {
+            speakText(`Sorry, ${langCode} is not a supported language.`);
+            return;
+        }
+
+        if (currentLang !== langCode) {
             setCurrentLang(langCode);
-            SpeechRecognition.stopListening(); // Stop current listening session immediately
-            // The useEffect below will restart listening with the new langCode
+            SpeechRecognition.stopListening();
+            setIsListeningActive(false); // Update internal state
+            // The useEffect below will handle restarting listening with the new langCode
             speakText(`Switching to ${LANGUAGES[langCode]} language.`);
             resetTranscript(); // Clear transcript after language switch
         } else {
@@ -80,17 +101,23 @@ function VoiceCommand() {
         resetTranscript,
         browserSupportsSpeechRecognition
     } = useSpeechRecognition({
-        // Pass the current active language to the speech recognition engine
         lang: currentLang,
         commands: [
             {
-                command: 'Go to *',
+                // Updated command to handle "Go to home" and other sections more robustly
+                command: ['Go to *', 'Navigate to *', 'Show me *', 'Go *'],
                 callback: (section) => {
-                    const lower = section.toLowerCase();
-                    if (lower === 'admin login' || lower === 'admin') {
+                    const lowerSection = section.toLowerCase();
+                    if (lowerSection === 'admin login' || lowerSection === 'admin') {
                         navigate('/admin/login');
+                        speakText("Navigating to admin login.");
+                    } else if (lowerSection === 'home') { // Explicitly handle 'home' for clarity
+                        scrollToSection('home');
+                    }
+                    else if (['about', 'blog', 'certifications', 'contact'].includes(lowerSection)) {
+                        scrollToSection(lowerSection);
                     } else {
-                        scrollToSection(lower);
+                        speakText(`I can't go to "${section}". Please specify a valid section like home, about, blog, certifications, or contact.`);
                     }
                     resetTranscript();
                 }
@@ -99,6 +126,7 @@ function VoiceCommand() {
                 command: 'Scroll down',
                 callback: () => {
                     window.scrollBy({ top: 400, behavior: 'smooth' });
+                    speakText("Scrolling down.");
                     resetTranscript();
                 }
             },
@@ -106,6 +134,7 @@ function VoiceCommand() {
                 command: 'Scroll up',
                 callback: () => {
                     window.scrollBy({ top: -400, behavior: 'smooth' });
+                    speakText("Scrolling up.");
                     resetTranscript();
                 }
             },
@@ -118,17 +147,19 @@ function VoiceCommand() {
                 }
             },
             {
-                command: 'Stop listening',
+                // Unified command for toggling listening
+                command: ['Toggle listening', 'Stop listening', 'Start listening'],
                 callback: () => {
-                    SpeechRecognition.stopListening();
-                    resetTranscript();
-                }
-            },
-            {
-                command: 'Start listening',
-                callback: () => {
-                    // When starting listening manually, ensure it uses the current language
-                    SpeechRecognition.startListening({ continuous: true, lang: currentLang });
+                    if (listening) {
+                        SpeechRecognition.stopListening();
+                        setIsListeningActive(false);
+                        speakText("Speech recognition stopped.");
+                    } else {
+                        // Ensure it starts continuously with the current language
+                        SpeechRecognition.startListening({ continuous: true, lang: currentLang });
+                        setIsListeningActive(true);
+                        speakText("Speech recognition started.");
+                    }
                     resetTranscript();
                 }
             },
@@ -136,9 +167,10 @@ function VoiceCommand() {
                 command: 'Clear transcript',
                 callback: () => {
                     resetTranscript();
+                    speakText("Transcript cleared.");
                 }
             },
-            // --- New Language Switching Commands ---
+            // --- Language Switching Commands ---
             {
                 command: 'Change to English',
                 callback: () => switchLanguage('en-US')
@@ -149,32 +181,62 @@ function VoiceCommand() {
             },
             {
                 command: 'Change to Setswana',
-                callback: () => switchLanguage('tn-ZA')
+                callback: () => {
+                    // This command will not work unless 'tn-ZA' is added to the LANGUAGES object above.
+                    // If you add it, uncomment the line in LANGUAGES.
+                    if (LANGUAGES['tn-ZA']) {
+                        switchLanguage('tn-ZA');
+                    } else {
+                        speakText("Setswana language support is not fully configured or not supported by your browser.");
+                    }
+                }
             },
             {
                 command: 'Speak in Setswana', // Alternative command
-                callback: () => switchLanguage('tn-ZA')
+                callback: () => {
+                    if (LANGUAGES['tn-ZA']) {
+                        switchLanguage('tn-ZA');
+                    } else {
+                        speakText("Setswana language support is not fully configured or not supported by your browser.");
+                    }
+                }
             }
-            // --- End New Language Switching Commands ---
+            // --- End Language Switching Commands ---
         ]
     });
 
-    // This useEffect ensures that speech recognition is always active with the correct language
-    // It will re-run when `listening` status or `currentLang` changes.
+    // Effect to manage initial listening state and re-activate after language switch
     useEffect(() => {
-        if (!listening) { // Only if not currently listening (e.g., stopped by a command or unmount)
-            // Start listening with the current language
+        // Start listening initially when component mounts if not already active
+        if (!listening && !isListeningActive) {
+            SpeechRecognition.startListening({ continuous: true, lang: currentLang });
+            setIsListeningActive(true);
+        }
+        // If language changes and not listening, restart listening
+        if (!listening && isListeningActive && SpeechRecognition.browserSupportsSpeechRecognition) {
             SpeechRecognition.startListening({ continuous: true, lang: currentLang });
         }
-    }, [listening, currentLang]); // Re-run effect if 'listening' state or 'currentLang' changes
+    }, [listening, currentLang, isListeningActive]); // Depend on listening, currentLang, and internal active state
+
+    // Synchronize internal listening state with useSpeechRecognition's 'listening'
+    // This handles cases where useSpeechRecognition might stop listening internally (e.g., due to silence)
+    useEffect(() => {
+        if (listening) {
+            setIsListeningActive(true);
+        } else {
+            // If listening stops unexpectedly, set internal state to false
+            setIsListeningActive(false);
+        }
+    }, [listening]);
+
 
     if (!browserSupportsSpeechRecognition) {
-        return <span>Your browser does not support speech recognition.</span>;
+        return <span className="voice-command-unsupported">Your browser does not support speech recognition. Please use Chrome, Firefox, or Edge.</span>;
     }
 
     return (
         <div className="voice-command">
-            <p>{listening ? 'Listening...' : 'Not listening'}</p>
+            <p>{isListeningActive ? 'Listening...' : 'Not listening'}</p>
             <p><em>{transcript}</em></p>
         </div>
     );

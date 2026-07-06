@@ -17,6 +17,7 @@ function getYouTubeId(url) {
 function Home() {
     const [blogPosts, setBlogPosts] = useState([]);
     const [expandedPostId, setExpandedPostId] = useState(null);
+    const [isLoadingBlogPosts, setIsLoadingBlogPosts] = useState(true);
     const location = useLocation();
 
     // Effect for hash-based scrolling
@@ -55,7 +56,13 @@ function Home() {
                         setBlogPosts([]); // Reset if data format is unexpected
                     }
                 })
-                .catch(error => console.error('Error fetching or processing blog posts:', error));
+                .catch(error => {
+                    console.error('Error fetching or processing blog posts:', error);
+                    setBlogPosts([]);
+                })
+                .finally(() => {
+                    setIsLoadingBlogPosts(false);
+                });
         };
 
         // Fetch immediately when the component mounts
@@ -98,30 +105,27 @@ function Home() {
                         </div>
                         <div className="about-text">
                             <p>
-                                Hi, I'm Lorens Tshepo Maleo, a skilled professional with a strong foundation
-                                in full-stack development, data analytics, and software engineering.
-                                My passion lies in software development, and I'm eager to contribute to
-                                challenging projects while continuously expanding my technical expertise
-                                through hands-on experience and continuous learning.
+                                Hi, I'm Lorens Tshepo Maleo, an adaptable full-stack software engineer and ICT
+                                professional with a deep passion for building scalable, high-performance applications.
+                                I thrive on solving complex technical challenges, refining system architectures,
+                                and continuously expanding my engineering toolkit through hands-on development
+                                and production deployments.
                             </p>
                             <br/>
                             <p>
-                                I'm technically proficient and adept at working in Linux environments,
-                                including Open Euler, OpenGauss, and Kunpeng. I specialize in developing
-                                 and deploying applications using Java, Spring Boot, React, Python and
-                                SQL, while adhering to industry best practices. My skills also extend to
-                                data analytics, visualization, and reporting, enhancing my ability to work
-                                with business intelligence tools.
+                                I am highly proficient in backend architecture using Java, Spring Boot, and Python,
+                                alongside native mobile application development with Kotlin. My technical expertise
+                                extends to managing relational databases using SQL and OpenGauss, and configuring,
+                                testing, and deploying code securely across diverse Linux environments, including
+                                OpenEuler and Kunpeng systems.
                             </p>
                             <br/>
                             <p>
-                                As a regional finalist in the Huawei ICT Competition, I've demonstrated strong
-                                computational and problem-solving abilities. I thrive in collaborative team
-                                settings and have experience with GitHub-based collaborations and agile
-                                software development practices. I'm a natural problem solver, capable of
-                                analyzing complex issues and delivering effective solutions. Feel free to
-                                explore my work and see how my skills can bring innovative solutions to
-                                your projects.
+                                As a regional finalist in the Huawei ICT Competition (Computing Track), I have a
+                                proven track record of strong computational problem-solving. I excel in collaborative,
+                                Agile-driven environments utilizing GitHub, always focusing on writing clean,
+                                industry-compliant code that bridges intelligent software solutions with seamless
+                                user experiences.
                             </p>
                         </div>
                     </div>
@@ -130,13 +134,18 @@ function Home() {
                 <section id="blog" className="blog-section">
                     <h2>From the Blog</h2>
                     <div className="blog-cards">
-                        {blogPosts.length > 0 ? (
+                        {isLoadingBlogPosts ? (
+                            // Render the spinner graphic and text here
+                            <div className="spinner-container">
+                                <div className="spinner"></div>
+                                <p>Loading blog posts...</p>
+                            </div>
+                        ) : blogPosts.length > 0 ? (
                             blogPosts.map(post => {
-                                // Corrected YouTube URL regex and embed src (use www.youtube.com for standard embeds)
+                                // Corrected YouTube URL regex and embed src
                                 const youtubeId = getYouTubeId(post.videoUrl);
 
                                 const isExpanded = expandedPostId === post.id;
-                                // Use post.summary if available, otherwise truncate content
                                 const displayContent = isExpanded ? post.content : (post.summary || post.content?.substring(0, 150) + '...');
 
                                 return (

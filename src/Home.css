@@ -456,3 +456,29 @@ button:hover {
     height: 200px;
   }
 }
+
+/* Spinner Styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0; /* Add some vertical padding */
+  min-height: 150px; /* Ensure spinner has space even if no content */
+  color: #555; /* A subtle color */
+  font-size: 1.1em;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db; /* Blue color for the spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Animation definition */
+  margin-right: 15px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

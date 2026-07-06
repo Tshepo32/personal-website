@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-icons">
-                    <a href="https://www.linkedin.com/in/lorens-tshepo-maleo-2533b04a/" target="_blank"
+                    <a href="https://www.linkedin.com/in/lorens-tshepo-m-2533b04a/" target="_blank"
                        rel="noopener noreferrer" aria-label="LinkedIn">
                         <FaLinkedin />
                     </a>
