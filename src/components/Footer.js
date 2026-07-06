@@ -16,7 +16,7 @@ const Footer = () => {
                         <FaGithub />
                     </a>
                 </div>
-                <p>© {new Date().getFullYear()} Lorens Tshepo Male. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Lorens Tshepo Maleo. All rights reserved.</p>
             </div>
         </footer>
     );
