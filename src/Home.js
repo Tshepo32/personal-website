@@ -4,9 +4,10 @@ import Navbar from './components/Navbar';
 import './Home.css';
 import VoiceCommand from "./VoiceCommand";
 import tshepoImg from './tshepo.jpg';
-import { FaLinkedin, FaGithub, FaGooglePlay, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function getYouTubeId(url) {
+    // This regex is more robust for various YouTube URL formats
     const match = url.match(
         /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/
     );
@@ -19,6 +20,7 @@ function Home() {
     const [isLoadingBlogPosts, setIsLoadingBlogPosts] = useState(true);
     const location = useLocation();
 
+    // Effect for hash-based scrolling
     useEffect(() => {
         if (location.hash) {
             const id = location.hash.replace('#', '');
@@ -31,22 +33,27 @@ function Home() {
         }
     }, [location]);
 
+    // Effect for initial and periodic blog posts fetch with frontend sorting/slicing
     useEffect(() => {
         const fetchAndProcessBlogPosts = () => {
+            // Keep the query parameters in the fetch URL, as they might optimize backend response
             fetch('https://personal-website-16.onrender.com/api/blog/getall?limit=2&sortBy=createdAt:desc')
                 .then(response => {
                     if (!response.ok) {
                         console.error('Network response was not ok (during blog fetch):', response.statusText);
+                        // No need to throw an error that stops the app if the primary goal is just to ping
                     }
                     return response.json();
                 })
                 .then(data => {
-                    if (data && Array.isArray(data)) {
+                    if (data && Array.isArray(data)) { // Ensure data is an array before processing
+                        // Frontend sorting to ensure latest posts are first
                         const sortedData = [...data].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                        // Frontend slicing to get only the top 2 latest posts
                         setBlogPosts(sortedData.slice(0, 2));
                     } else {
                         console.warn("Fetched data is not an array:", data);
-                        setBlogPosts([]);
+                        setBlogPosts([]); // Reset if data format is unexpected
                     }
                 })
                 .catch(error => {
@@ -58,10 +65,15 @@ function Home() {
                 });
         };
 
+        // Fetch immediately when the component mounts
         fetchAndProcessBlogPosts();
+
+        // Set up the interval to fetch every 10 seconds (10000 milliseconds)
         const intervalId = setInterval(fetchAndProcessBlogPosts, 10000);
+
+        // Clean up the interval when the component unmounts
         return () => clearInterval(intervalId);
-    }, []);
+    }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
 
     const toggleExpand = (postId) => {
         setExpandedPostId(prevId => (prevId === postId ? null : postId));
@@ -119,59 +131,20 @@ function Home() {
                     </div>
                 </section>
 
-                {/* --- PROJECTS SECTION (LINKS CODECONNECT FOR GOOGLE SEO INDEXING) --- */}
-                <section id="projects" className="projects-section">
-                    <h2>Featured Projects</h2>
-                    <div className="certification-cards">
-                        <div className="certification-card">
-                            <h3>CodeConnect – Mobile App</h3>
-                            <p>Android / Kotlin & Jetpack Compose</p>
-                            <p>
-                                A live production mobile application built for developers to collaborate, share insights, 
-                                and connect in real time. Features parallel onboarding, session management, and deep link synchronization.
-                            </p>
-                            <p><strong>Technologies:</strong> Kotlin, Jetpack Compose, Firebase, Coroutines, Hilt</p>
-                            <a 
-                                href="https://play.google.com/store/apps/details?id=com.tshepo.codeconnect" 
-                                className="link-button" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                <FaGooglePlay style={{ marginRight: '8px' }} /> View on Google Play
-                            </a>
-                        </div>
-
-                        <div className="certification-card">
-                            <h3>C Language Tetris Game</h3>
-                            <p>C Programming & Web Host Deployment</p>
-                            <p>
-                                A custom Tetris game engineered in C, demonstrating low-level data structures, array manipulation, 
-                                and game loop logic hosted online.
-                            </p>
-                            <p><strong>Technologies:</strong> C, Web Architecture, Render</p>
-                            <a 
-                                href="https://github.com/tshepo32" 
-                                className="link-button" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                <FaExternalLinkAlt style={{ marginRight: '8px' }} /> View Project
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
                 <section id="blog" className="blog-section">
                     <h2>From the Blog</h2>
                     <div className="blog-cards">
                         {isLoadingBlogPosts ? (
+                            // Render the spinner graphic and text here
                             <div className="spinner-container">
                                 <div className="spinner"></div>
                                 <p>Loading blog posts...</p>
                             </div>
                         ) : blogPosts.length > 0 ? (
                             blogPosts.map(post => {
+                                // Corrected YouTube URL regex and embed src
                                 const youtubeId = getYouTubeId(post.videoUrl);
+
                                 const isExpanded = expandedPostId === post.id;
                                 const displayContent = isExpanded ? post.content : (post.summary || post.content?.substring(0, 150) + '...');
 
@@ -194,6 +167,7 @@ function Home() {
                                             <div className="blog-video">
                                                 {youtubeId ? (
                                                     <iframe
+                                                        // Standard YouTube embed URL
                                                         src={`https://www.youtube.com/embed/${youtubeId}`}
                                                         frameBorder="0"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -209,8 +183,10 @@ function Home() {
                                             </div>
                                         )}
 
+                                        {/* Render content, allowing for HTML if needed */}
                                         <p dangerouslySetInnerHTML={{ __html: displayContent }}></p>
 
+                                        {/* Only show "Read More" button if there's more content than initially displayed */}
                                         {post.content && (post.summary && post.content.length > post.summary.length || (!post.summary && post.content.length > 150)) && (
                                             <button onClick={() => toggleExpand(post.id)} className="link-button">
                                                 {isExpanded ? 'Read Less' : 'Read More'}
@@ -238,9 +214,12 @@ function Home() {
                                 This course has been a pivotal step in my journey as a software developer. As one of the
                                 most comprehensive introductory computer science courses, CS50 has provided me with a
                                 robust foundation in key areas such as algorithms, data structures, computer
-                                architecture, and web development.
+                                architecture,
+                                and web development. I worked with C, Python, SQL, and JavaScript, building essential
+                                problem-solving skills.
                             </p>
-                            <p><strong>Skills:</strong> Problem solving, data structures, algorithms, debugging, web development.</p>
+                            <p><strong>Skills:</strong> Problem solving, data structures, algorithms, debugging, web
+                                development.</p>
                             <a href="https://cs50.harvard.edu/certificates/c603cf04-1d89-49c5-bb5e-5366eaddcd58"
                                className="link-button" target="_blank" rel="noopener noreferrer">
                                 View Certificate
@@ -254,7 +233,8 @@ function Home() {
                                 This certification validates foundational knowledge of artificial intelligence (AI) and
                                 machine learning (ML) concepts, and how they are implemented using Azure services.
                             </p>
-                            <p><strong>Skills:</strong> AI workloads, ML models, computer vision, natural language processing, responsible AI.</p>
+                            <p><strong>Skills:</strong> AI workloads, ML models, computer vision, natural language
+                                processing, responsible AI.</p>
                             <a href="https://learn.microsoft.com/en-us/users/lorensmaleo-6392/credentials/96c68fe5e9fc9c13?ref=https%3A%2F%2Fwww.linkedin.com%2F"
                                className="link-button" target="_blank" rel="noopener noreferrer">
                                 View Certificate
@@ -269,7 +249,8 @@ function Home() {
                                 solutions using Huawei Cloud. It covers architecture best practices, cloud-native
                                 services, networking, security, and high-availability systems.
                             </p>
-                            <p><strong>Skills:</strong> Cloud architecture, microservices, security, scalability, Huawei Cloud services.</p>
+                            <p><strong>Skills:</strong> Cloud architecture, microservices, security, scalability, Huawei
+                                Cloud services.</p>
                             <a href="https://www.credly.com/badges/7fb2264b-ee19-45fc-87d1-9e65f2fae0e4/linked_in_profile"
                                className="link-button" target="_blank" rel="noopener noreferrer">
                                 View Certificate
