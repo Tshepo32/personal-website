@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import './Home.css';
 import VoiceCommand from "./VoiceCommand";
 import tshepoImg from './tshepo.jpg';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaGooglePlay } from 'react-icons/fa';
 
 function getYouTubeId(url) {
     // This regex is more robust for various YouTube URL formats
@@ -127,6 +127,29 @@ function Home() {
                                 industry-compliant code that bridges intelligent software solutions with seamless
                                 user experiences.
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" className="certification-section">
+                    <h2>Featured Project</h2>
+                    <div className="certification-cards">
+                        <div className="certification-card">
+                            <h3>CodeConnect</h3>
+                            <p><strong>Mobile Application (Android)</strong></p>
+                            <p>
+                                CodeConnect is an Android application designed to bridge developers and technology enthusiasts. Built natively using Kotlin, CodeConnect provides a seamless platform for developers to connect, showcase their ongoing software projects, and collaborate.
+                            </p>
+                            <p><strong>Tech Stack:</strong> Kotlin, Android SDK, Jetpack Compose, REST APIs, Git.</p>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.tshepo.codeconnect"
+                                className="hero-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '12px' }}
+                            >
+                                <FaGooglePlay /> Get it on Google Play
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -286,7 +309,7 @@ function Home() {
                 <footer className="footer">
                     <div className="footer-content">
                         <div className="footer-icons">
-                            <a href="https://www.linkedin.com/in/lorens-tshepo-maleo-2533b04a/" target="_blank"
+                            <a href="https://www.linkedin.com/in/lorens-tshepo-m-2533b04a/" target="_blank"
                                rel="noopener noreferrer">
                                 <FaLinkedin />
                             </a>
