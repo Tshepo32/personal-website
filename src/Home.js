@@ -86,10 +86,7 @@ function Home() {
                 <header className="hero" id="home">
                     <h1>Welcome, I'm Lorens Tshepo Maleo 👋</h1>
                     <p>
-                        Frontend Developer Intern @ BOS Technology
-                    </p>
-                    <p>
-                        Full-Stack Developer | Regional Finalist in Huawei 2024–2025
+                        Full-Stack Developer | Regional Finalist in Huawei 2025–2026
                         ICT Competition
                     </p>
                     <a href="#contact" className="hero-button">Get in Touch</a>
